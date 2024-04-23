@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body bgcolor="yellow">
+    <h1>Student Information</h1>
+    {% if Student_list %}
+      {% for student in Student_list %}
+      <h2>Student_name:{{ student.sname }}</h2>
+      <ul>
+        <li>Student_rollno:{{ student.sno }}</li>
+        <li>Student_dob:{{ student.sdob }}</li>
+        <li>Student_smarks:{{ student.smarks }}</li>
+        <li>Student_phone:{{ student.sphone }}</li>
+        <li>Student_address:{{ student.saddr }}</li>
+        <li>Student_email:{{ student.semail }}</li>
+      </ul>
+      {% endfor %}
+      {% else %}
+      <p> no record are there....</p>
+      {% endif %}
+</body>
+</html>
